@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5433/demo_security
+    username: security
+    password: security
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show_sql: true
+      format_sql: true
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
+
+# JWT
+jwt:
+  secret: cqyzsslyzmmlyglhshygxhsyytlhsdxhssyggs
+  expiration: 360000
+  prefix: Bearer
+  header: Authorization
+debug: false
