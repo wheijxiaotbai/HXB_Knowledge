@@ -24,5 +24,7 @@
 
 * 在浏览器访问127.0.0.1:8080
 
-* 
+  ![image](https://github.com/wheijxiaotbai/HXB_Knowledge/blob/springboot_jwt_security_demo/image/demo1_1.png)
+
+* 在demo中没有对创建用户的接口做权限限制,方便自定义用户进行测试
 
