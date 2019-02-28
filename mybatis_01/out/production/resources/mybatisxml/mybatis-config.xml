@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.31.150:3306/hxb_demo_mynatis_01" />
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mybatisxml/sqlmap/User.xml"/>
+    </mappers>
+</configuration>
+
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+        <!--<!DOCTYPE configuration-->
+                <!--PUBLIC "-//mybatis.org//DTD Config 3.0//EN"-->
+                <!--"http://mybatis.org/dtd/mybatis-3-config.dtd">-->
+<!--<configuration>-->
+<!--<properties resource="jdbc.properties"/>-->
+<!--&lt;!&ndash; 别名 包以其子包下所有类   头字母大小都行&ndash;&gt;-->
+<!--<typeAliases>-->
+    <!--&lt;!&ndash; 		<typeAlias type="com.itheima.mybatis.pojo.User" alias="User"/> &ndash;&gt;-->
+    <!--<package name="com.itheima.mybatis.pojo"/>-->
+<!--</typeAliases>-->
+<!--&lt;!&ndash; 和spring整合后 environments配置将废除    &ndash;&gt;-->
+<!--<environments default="development">-->
+    <!--<environment id="development">-->
+        <!--&lt;!&ndash; 使用jdbc事务管理 &ndash;&gt;-->
+        <!--<transactionManager type="JDBC" />-->
+        <!--&lt;!&ndash; 数据库连接池 &ndash;&gt;-->
+        <!--<dataSource type="POOLED">-->
+            <!--<property name="driver" value="${jdbc.driver}" />-->
+            <!--<property name="url"-->
+                      <!--value="jdbc:mysql://192.168.31.150:3306/hxb_demo_mynatis_01?characterEncoding=utf-8" />-->
+            <!--<property name="username" value="root" />-->
+            <!--<property name="password" value="123456" />-->
+        <!--</dataSource>-->
+    <!--</environment>-->
+<!--</environments>-->
+
+<!--&lt;!&ndash; Mapper的位置  Mapper.xml 写Sql语句的文件的位置 &ndash;&gt;-->
+<!--<mappers>-->
+    <!--&lt;!&ndash; 		<mapper resource="sqlmap/User.xml" class="" url=""/> &ndash;&gt;-->
+    <!--&lt;!&ndash; 		<mapper resource="sqlmap/User.xml" class="" url=""/> &ndash;&gt;-->
+    <!--&lt;!&ndash; 		<mapper class="com.itheima.mybatis.mapper.UserMapper" /> &ndash;&gt;-->
+    <!--&lt;!&ndash; 		<mapper url="" /> &ndash;&gt;-->
+    <!--&lt;!&ndash;<mapper resource="User.xml"/>&ndash;&gt;-->
+<!--</mappers>-->
+<!--</configuration>-->
